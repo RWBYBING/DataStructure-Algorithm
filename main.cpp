@@ -4,6 +4,7 @@
 
 #include <dynamic_array.h>
 #include <bubble_sort.h>
+#include <selection_sort.h>
 
 static void printVector(const std::vector<int>& vec)
 {
@@ -18,6 +19,7 @@ int main(int, char**)
     std::cout << "Choose the specific vector and algorithm" << std::endl;
     std::cout << "[0] Dynamic Array" << std::endl;
     std::cout << "[20] Bubble Sort" << std::endl;
+    std::cout << "[21] Selection Sort" << std::endl;
 
     int index;
     std::cin >> index;
@@ -85,6 +87,14 @@ int main(int, char**)
     {
         std::vector<int> vec = {5, 2, 9, 1, 3};
         BubbleSort(vec);
+        printVector(vec);
+    }
+
+    // Selection Sort
+    if (index == 21)
+    {
+        std::vector<int> vec = {5, 2, 9, 1, 3};
+        SelectionSort(vec);
         printVector(vec);
     }
 }
