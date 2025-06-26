@@ -1,12 +1,23 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include <dynamic_array.h>
+#include <bubble_sort.h>
+
+static void printVector(const std::vector<int>& vec)
+{
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+}
 
 int main(int, char**)
 {
     std::cout << "Choose the specific vector and algorithm" << std::endl;
     std::cout << "[0] Dynamic Array" << std::endl;
+    std::cout << "[20] Bubble Sort" << std::endl;
 
     int index;
     std::cin >> index;
@@ -67,5 +78,13 @@ int main(int, char**)
         std::cout << "Print all the element: ";
         d_array.PrintAll();
         std::cout << std::endl;
+    }
+
+    // Bubble Sort
+    if (index == 20)
+    {
+        std::vector<int> vec = {5, 2, 9, 1, 3};
+        BubbleSort(vec);
+        printVector(vec);
     }
 }
