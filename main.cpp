@@ -1,18 +1,71 @@
 #include <iostream>
 #include <string>
 
+#include <dynamic_array.h>
+
 int main(int, char**)
 {
     std::cout << "Choose the specific vector and algorithm" << std::endl;
+    std::cout << "[0] Dynamic Array" << std::endl;
+
     int index;
     std::cin >> index;
-    switch (index)
+
+    // Dynamic Array
+    if (index == 0)
     {
-    case 0:
-        std::cout << "vector" << std::endl;
-        break;
-    
-    default:
-        break;
+        std::cout << "Init a dynamic array" << std::endl;
+        DynamicArray d_array;
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << std::endl;
+
+        std::cout << "resize the capacity of the array to 2" << std::endl;
+        d_array.Resize(2);
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << "Print all the element: ";
+        d_array.PrintAll();
+        std::cout << std::endl;
+
+        std::cout << "reserve the capacity of the array to 4" << std::endl;
+        d_array.Reserve(4);
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << "Print all the element: ";
+        d_array.PrintAll();
+        std::cout << std::endl;
+
+        std::cout << "push back 10" << std::endl;
+        d_array.push_back(10);
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << "Print all the element: ";
+        d_array.PrintAll();
+        std::cout << std::endl;
+
+        std::cout << "push back 20" << std::endl;
+        d_array.push_back(20);
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << "Print all the element: ";
+        d_array.PrintAll();
+        std::cout << std::endl;
+
+        std::cout << "push back 30" << std::endl;
+        d_array.push_back(30);
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << "Print all the element: ";
+        d_array.PrintAll();
+        std::cout << std::endl;
+
+        std::cout << "pop back" << std::endl;
+        d_array.pop_back();
+        std::cout << "The Size of the array is: " << d_array.GetSize() << std::endl;
+        std::cout << "The Capacity of the array is: " << d_array.GetCapacity() << std::endl;
+        std::cout << "Print all the element: ";
+        d_array.PrintAll();
+        std::cout << std::endl;
     }
 }
