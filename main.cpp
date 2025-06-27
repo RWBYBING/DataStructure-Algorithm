@@ -5,6 +5,7 @@
 #include <dynamic_array.h>
 #include <bubble_sort.h>
 #include <selection_sort.h>
+#include <insertion_sort.h>
 
 static void printVector(const std::vector<int>& vec)
 {
@@ -20,6 +21,7 @@ int main(int, char**)
     std::cout << "[0] Dynamic Array" << std::endl;
     std::cout << "[20] Bubble Sort" << std::endl;
     std::cout << "[21] Selection Sort" << std::endl;
+    std::cout << "[22] Insertion Sort" << std::endl;
 
     int index;
     std::cin >> index;
@@ -95,6 +97,14 @@ int main(int, char**)
     {
         std::vector<int> vec = {5, 2, 9, 1, 3};
         SelectionSort(vec);
+        printVector(vec);
+    }
+
+    // Insertion Sort
+    if (index == 22)
+    {
+        std::vector<int> vec = {5, 2, 9, 1, 3};
+        InsertionSort(vec);
         printVector(vec);
     }
 }

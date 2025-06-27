@@ -4,7 +4,10 @@
 #include <vector>
 #include <algorithm>
 
-void SelectionSort(std::vector<int>& vec)
+// Best: O(n^2)
+// Worst: O(n^2)
+// Average: O(n^2)
+static void SelectionSort(std::vector<int>& vec)
 {
     for (size_t i = 0; i < vec.size() - 1; ++i)
     {
